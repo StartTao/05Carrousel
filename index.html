@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>旋转木马 幻灯片开发</title>
+<style>
+    *{
+        padding:0;
+        margin: 0;
+    }
+</style>
+<link type="text/css" rel="stylesheet" href="css/carousel.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<!--<script type="text/javascript" src="js/carousel.js"></script>-->
+<script type="text/javascript" src="js/carousel1.js"></script>
+</head>
+<body style="padding:50px">
+    <div class="J_Poster poster-main" data-setting='{
+                                                    "width":1000,
+                                                   "height":270,
+                                                    "posterWidth":640,
+                                                    "posterHeight":270,
+                                                    "scale":0.9,  
+                                                    "speed":500,
+                                                    "autoPlay":true,
+                                                    "delay":2000,
+                                                    "verticalAlign":"middle"
+                                                    }'>
+        <div class="poster-btn poster-prev-btn">  </div>
+        <ul class="poster-list">
+            <li class="poster-item"><a href=""><img src="images/1.jpg" alt="" width="100%"></a></li>
+            <li class="poster-item"><a href=""><img src="images/2.jpg" alt="" width="100%"></a></li>
+            <li class="poster-item"><a href=""><img src="images/3.jpg" alt="" width="100%"></a></li>
+            <li class="poster-item"><a href=""><img src="images/4.jpg" alt="" width="100%"></a></li>
+            <li class="poster-item"><a href=""><img src="images/5.jpg" alt="" width="100%"></a></li>
+             <li class="poster-item"><a href=""><img src="images/2.jpg" alt="" width="100%"></a></li>
+            <li class="poster-item"><a href=""><img src="images/3.jpg" alt="" width="100%"></a></li>
+            <li class="poster-item"><a href=""><img src="images/4.jpg" alt="" width="100%"></a></li>
+            <li class="poster-item"><a href=""><img src="images/5.jpg" alt="" width="100%"></a></li>
+        </ul>
+        <div class="poster-btn poster-next-btn">  </div>
+    </div>
+
+
+<script>
+    $(function(){
+        //Carousel
+        //var carousel = new Carousel($('J_Poster').eq(0));  //传进单个
+        
+
+        //初始化幻灯片切换中所有的 J_Poster 类  必须加 点 .J_Poster！！！
+        Carousel.init($(".J_Poster"));  //传进所有类名为 J_Poster 的集合
+    });
+</script>
+</body>
+</html>
